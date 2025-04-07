@@ -67,7 +67,7 @@ def binary_search(sequence, number):
             right = middle - 1
         elif sequence[middle] < number:
             left = middle + 1
-
+    return None
 
 
 
