@@ -46,13 +46,34 @@ def pattern_search(sequence, patern):
             if sequence[idx + idx_pattern] == patern_element:
                 pattern_similarity = pattern_similarity + 1
             else:
-                pass
+                break
+
         if pattern_similarity == pattern_lengt:
             list_of_dna.add(idx + pattern_lengt // 2 - 1)
         else:
             pass
 
     return list_of_dna
+
+def binary_search(sequence, number):
+    left = 0
+    right = len(sequence) - 1
+    while right >= left:
+        middle = (left + right) // 2
+        print(sequence[middle])
+        if sequence[middle] == number:
+            return middle
+        elif sequence[middle] > number:
+            right = middle - 1
+        elif sequence[middle] < number:
+            left = middle + 1
+
+
+
+
+
+
+
 
 def main():
     json_filename = "sequential.json"
