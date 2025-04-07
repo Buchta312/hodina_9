@@ -1,6 +1,8 @@
 import os
 import json
 
+from range import hladane_cislo
+
 # get current working directory path
 cwd_path = os.getcwd()
 
@@ -22,11 +24,18 @@ def read_data(sequential, field):
             print(f"field {field} not existing")
             return None
 
+def linear_search(list_of_numbers, number):
+    return list_of_numbers
+
 def main():
-    pass
+    json_filename = "sequential.json"
+    my_data = read_data(json_filename, "unordered_numbers")
+    print(my_data)
 
 
 if __name__ == '__main__':
+    my_list = [1, 2, 5, 7]
+    searched_number = 5
+    found_number = linear_search(my_list, searched_number)
     main()
-    json_filename = "sequential.json"
-    my_data = read_data(json_filename, "unordered_numbers")
+
